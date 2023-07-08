@@ -8,29 +8,45 @@ namespace ConvertJpg
     {
         static void Main(string[] args)
         {
-            Console.Write(">>");
-            var targetDir = Console.ReadLine();
+            while(true)
+            {
+                var quality = 100;
+                Console.Write("Path>>");
+                var targetDir = Console.ReadLine();
 
-            if (targetDir == null)
-                return;
-            
-            Parallel.ForEach(Directory.EnumerateDirectories(targetDir), (dir) => 
-            { 
-                var sourceDir = new DirectoryInfo(dir);
+                var split = targetDir.Split(" ");
 
-                var jpgDir = Path.Combine(dir, $"{sourceDir.Name}_jpg");
-                Directory.CreateDirectory(jpgDir);
+                if(split.Length > 1 )
+                    quality = Convert.ToInt32(split[1]);
 
-                foreach (string file in Directory.EnumerateFiles(dir))
+                if (targetDir == null)
+                    return;
+
+                targetDir = split[0];
+
+                Parallel.ForEach(Directory.EnumerateDirectories(targetDir), (dir) =>
                 {
-                    Console.WriteLine(file);
+                    var sourceDir = new DirectoryInfo(dir);
 
-                    var destFileName = Path.Combine(jpgDir, $"{Path.GetFileNameWithoutExtension(file)}.jpg");
+                    var jpgDir = Path.Combine(dir, $"{sourceDir.Name}_jpg");
+                    Directory.CreateDirectory(jpgDir);
 
-                        Process.Start($"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" convert {file} {destFileName}");
-                }
-                Console.WriteLine(dir);
-            });
+                    foreach (string file in Directory.EnumerateFiles(dir))
+                    {
+                        Console.WriteLine(file);
+
+                        var destFileName = Path.Combine(jpgDir, $"{Path.GetFileNameWithoutExtension(file)}.jpg");
+
+                        if (File.Exists(destFileName))
+                            continue;
+
+                        Process.Start($"C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe\" convert {file} -quality {quality} {destFileName} ");
+                    }
+                    Console.WriteLine(dir);
+                });
+                Console.Write("終了<<");
+
+            }
         }
     }
 }
