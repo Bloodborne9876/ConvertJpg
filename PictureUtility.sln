@@ -5,7 +5,19 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConvertJpg", "ConvertJpg\ConvertJpg.csproj", "{D14935DC-F5AF-4480-9285-9DA266CC875A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateThumbnail", "CreateThumbnail\CreateThumbnail.csproj", "{93ACD1BC-69F1-46B1-A642-70BFECD894EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateThumbnail", "CreateThumbnail\CreateThumbnail.csproj", "{93ACD1BC-69F1-46B1-A642-70BFECD894EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShuffleImage", "shuffleImage\ShuffleImage.csproj", "{39D4DEE1-0CC4-4CE3-BEB5-18383C8C8EF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatePDF", "CreatePDF\CreatePDF.csproj", "{EBCEB869-8D49-4D90-A9A1-8E2354043B05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlnetSender", "ControlnetSender\ControlnetSender.csproj", "{67290FDE-CF0F-4866-8EF6-210881D65D42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlnetAPI", "ControlnetLib\ControlnetAPI.csproj", "{5CB52016-4002-4C22-BE84-E5168D8E5D80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlnetLibTests", "ControlnetLibTests\ControlnetLibTests.csproj", "{88766402-AD2F-4550-B34E-9902A36B0EEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlnetAPITests", "ControlnetAPITests\ControlnetAPITests.csproj", "{BA7BC4C0-7AD0-488A-9FA4-38771547EDA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +33,30 @@ Global
 		{93ACD1BC-69F1-46B1-A642-70BFECD894EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93ACD1BC-69F1-46B1-A642-70BFECD894EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93ACD1BC-69F1-46B1-A642-70BFECD894EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39D4DEE1-0CC4-4CE3-BEB5-18383C8C8EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39D4DEE1-0CC4-4CE3-BEB5-18383C8C8EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39D4DEE1-0CC4-4CE3-BEB5-18383C8C8EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39D4DEE1-0CC4-4CE3-BEB5-18383C8C8EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBCEB869-8D49-4D90-A9A1-8E2354043B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBCEB869-8D49-4D90-A9A1-8E2354043B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBCEB869-8D49-4D90-A9A1-8E2354043B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBCEB869-8D49-4D90-A9A1-8E2354043B05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67290FDE-CF0F-4866-8EF6-210881D65D42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67290FDE-CF0F-4866-8EF6-210881D65D42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67290FDE-CF0F-4866-8EF6-210881D65D42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67290FDE-CF0F-4866-8EF6-210881D65D42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CB52016-4002-4C22-BE84-E5168D8E5D80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CB52016-4002-4C22-BE84-E5168D8E5D80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CB52016-4002-4C22-BE84-E5168D8E5D80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CB52016-4002-4C22-BE84-E5168D8E5D80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88766402-AD2F-4550-B34E-9902A36B0EEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88766402-AD2F-4550-B34E-9902A36B0EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88766402-AD2F-4550-B34E-9902A36B0EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88766402-AD2F-4550-B34E-9902A36B0EEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA7BC4C0-7AD0-488A-9FA4-38771547EDA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA7BC4C0-7AD0-488A-9FA4-38771547EDA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA7BC4C0-7AD0-488A-9FA4-38771547EDA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA7BC4C0-7AD0-488A-9FA4-38771547EDA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
